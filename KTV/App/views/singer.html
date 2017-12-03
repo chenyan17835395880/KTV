@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>歌手</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/singer.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/iscroll.js"></script>
+    <script src="/KTV/Public/js/singer.js"></script>
+    <style>
+        .aside{
+            position: fixed;
+            top: 0;bottom: 0;
+            margin: auto;
+            right: 0.1rem;
+            margin-top: 50%;
+        }
+        .tips{
+            width: 100%;
+            font-size: 0.4rem;
+            color:#827d7d;
+        }
+    </style>
+</head>
+<body onload="loaded()">
+    <header>
+        <img src="/KTV/Public/img/zhuangtai1.png" alt="">
+    </header>
+    <nav class="nav">
+        <a href="/KTV/index.php/music/index">
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p><?php echo $data1['ftitle']?></p><!--标题-->
+        <a class="change"></a>
+    </nav>
+    <ul class="list">
+        <li><img src="/KTV/Public/img/yylb1.png" alt=""><a href="/KTV/index.php/music/select?type=<?php echo $data2['stype']?>">歌手</a></li>
+        <li><a href="/KTV/index.php/music/rank">排行榜</a></li>
+        <li><a href="">常唱</a></li>
+        <li><a href="/KTV/index.php/music/recommend">推荐歌单</a></li>
+    </ul>
+    <section class="search">
+        <i class="icon"></i>
+        <input type="text" placeholder="请输入你要搜索的歌手">
+    </section>
+    <div class="wrapper">
+        <div class="scroller">
+            <ul class="main">
+
+                <?php for($i=0;$i<count($data);$i++){?>
+
+                    <li dataall="<?php echo implode(',',$data[$i])?>">
+                        <a href="/KTV/index.php/music/songs?sid=<?php echo $data[$i]['sid']?>&type=<?php echo $data[$i]['stype']?>">
+                            <img src="<?php echo $data[$i]['images']?>" alt="">
+                            <?php echo $data[$i]['sname']?> (<?php echo $data[$i]['Dcounts']?>)
+                        </a>
+                    </li>
+                <!--select()传来的-->
+
+                <?php };?>
+            </ul>
+        </div>
+    </div>
+    <!--<ul class="aside">
+        <li class="tips">a</li>
+        <li class="tips">b</li>
+        <li class="tips">c</li>
+    </ul>-->
+</body>
+</html>

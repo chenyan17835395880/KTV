@@ -1,0 +1,95 @@
+<?php include "mainheader.html";?>
+
+<script src="/KTV/Public/js/musicmanager.js"></script>
+<link rel="stylesheet" href="/KTV/Public/css/gamemanager.css">
+<style>
+    .table>thead>.tr>th{
+        text-align: center;
+        /*width: 90px;*/
+    }
+    td input{
+        border: none;
+        text-align: center;
+    }
+    td input:focus{
+        outline: none;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+
+
+<div class="container">
+
+    <!--上面-->
+    <ul class="nav nav-tabs" role="tablist" id="Mytab">
+        <!--插入表-->
+        <li role="presentation" class="active">
+            <a href="#add" aria-controls="home" role="tab" data-toggle="tab" id="add">添加</a>
+        </li>
+        <!--查看表-->
+        <li role="presentation">
+            <a href="#list" aria-controls="profie" role="tab" data-toggle="tab" id="list">查看</a>
+        </li>
+    </ul>
+
+
+    <!--下面-->
+    <!--插入表-->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane tab_pane active" id="add-tab">
+            <div class="box">
+                <form action="" method="" enctype="">
+                    <div class="formGroup">
+                        <label for="">分类名称：</label>
+                        <input type="text" name="ftitle" placeholder="请输入分类名称">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">分类图片：</label>
+                        <input type="file" placeholder="请选择图片" id="images" multiple>
+                    </div>
+                    <div class="imgs" style="width:200px;margin-left: 20px;"></div>
+                    <!--<img src="" alt="" id="thumb" style="width:200px;margin-left: 20px">-->
+                    <div class="formGroup">
+                        <input type="hidden" name="images" ><!--hidden是把文件路径传到后台-->
+                    </div>
+                    <div class="progress" style="width: 1105px; margin:0 auto">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only">0% Complete</span>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <input class="submit" value="提交">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!--查看表-->
+        <div role="tabpanel" class="tab-pane tab_pane" id="list-tab">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading" style="padding-left: 17px">音乐管理 --> 分类管理</div>
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                    <tr class="tr">
+                        <th>sid</th>
+                        <th>分类名称</th>
+                        <th>分类图片</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排行榜</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/rank.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/iscroll.js"></script>
+    <script src="/KTV/Public/js/rank.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/Swiper-master/dist/css/swiper.min.css">
+    <script src="/KTV/Public/Swiper-master/dist/js/swiper.min.js"></script>
+    <style>
+        .swiper-container {
+            width: 100%;
+            /*padding-top: 0.5rem;
+            padding-bottom: 0.5rem;*/
+            margin-top: 0.5rem;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 70%;
+            height:3.5rem;
+            border: 0.05rem solid #fff;
+            box-sizing: border-box;
+            border-radius: 0.1rem;
+
+        }
+    </style>
+</head>
+<body onload="loaded()">
+<header>
+    <img src="/KTV/Public/img/zhuangtai1.png" alt="">
+</header>
+<nav class="nav">
+    <a href="/KTV/index.php/music/index">
+    <!--<a href="javascript:history.back();">-->
+        <img src="/KTV/Public/img/at_04.png" alt="">
+    </a>
+    <p>排行榜</p>
+    <a class="change"></a>
+</nav>
+<ul class="list">
+    <li><img src="/KTV/Public/img/yylb1.png" alt=""><a href="/KTV/index.php/music/select?type=<?php echo $data3['stype']?>">歌手</a></li>
+
+    <li><a href="/KTV/index.php/music/rank">排行榜</a></li>
+    <li><a href="">常唱</a></li>
+    <li><a href="/KTV/index.php/music/recommend">推荐歌单</a></li>
+</ul>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background: url('/KTV/Public/img/nan1.png') center /cover"></div>
+        <div class="swiper-slide" style="background: url('/KTV/Public/img/banner1.png') center /cover"></div>
+        <div class="swiper-slide" style="background: url('/KTV/Public/img/qcox.png') center /cover"></div>
+    </div>
+</div>
+<div class="search">
+    <i class="icon"></i>
+    <input type="text" placeholder="请输入歌手或歌名">
+</div>
+<div class="wrapper" style="top:6rem;">
+    <div class="scroller">
+        <ul class="main">
+
+            <?php for($i=0;$i<count($data);$i++){?>
+
+            <a href="/KTV/index.php/music/play">
+                <li dataall='<?php echo implode(",",$data[$i]);?>;<?php echo $data2[$data[$i]["singertype"]]["images"];?>'
+                    id='<?php echo $data[$i]["singertype"];?>'>
+                    <div class="left">
+                        <div class="left-one"></div>
+                        <div class="left-two">
+                            <img src="<?php echo $data2[$i]['images']?>" alt="">
+                        </div>
+                    </div>
+                    <div class="geming">
+                        <p><?php echo $data[$i]['oname']?></p>
+                        <p><?php echo $data[$i]['time']?></p>
+                    </div>
+                </li>
+            </a>
+
+            <?php }?>
+
+
+        </ul>
+    </div>
+</div>
+
+</body>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>
+</html>

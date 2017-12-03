@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%; }
+
+/*body {*/
+    /*padding: 20px; }*/
+
+.box {
+    /*margin-top: 20px;*/
+    width: 100%;
+    border: 1px solid #c4c8be;
+    padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 0; }
+.box .formGroup {
+    margin: 8px 20px; }
+.box .formGroup [type='text'] {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    display: block;
+    margin-top: 6px; }
+.box .formGroup .submit {
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+    font-size: 16px;
+    background: #272924;
+    color: #fff;
+text-align: center;}
+.box .formGroup label {
+    display: block;
+    color: #000;
+    margin-top: 25px; }
+.box .formGroup select {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    margin-top: 6px; }
+.box1 {
+    width: 100%;
+    height: auto;
+    border: 1px solid #c4c8be;
+    border-radius: 3px;  }
+.box1 .box-top {
+    height: 60px;
+    font-size: 18px;
+    line-height: 60px;
+    border-bottom: 1px solid #c4c8be;
+    box-sizing: border-box;
+    padding-left: 25px; }
+.box1 table {
+    width: 97%;
+    height: auto;
+    margin: 20px; }
+.box1 table th, .box table td {
+    border-right: 1px solid #c4c8be;
+    border-bottom: 1px solid #c4c8be;
+    height: auto;
+    padding: 5px 5px;
+    text-align: center; }
+.box1 table th:first-child, .box table td:first-child {
+    border-left: 1px solid #c4c8be; }
+.box1 table th {
+    border-top: 1px solid #c4c8be; }
+.box1 tr:nth-of-type(2n) {
+    background: #fff; }
+.box1 tr:nth-of-type(2n+1) {
+    background: #E7E7E7; }
+.table .del {
+    background: #DADADA;
+    padding: 2px;
+    border-radius: 4px;
+    color: #501A00;
+    border: 1px solid #c4c8be;
+    box-sizing: border-box; }
+.box1 .td-last {
+    width: 127px; }
+.table .change {
+    background: #272924;
+    padding: 4px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 15px; }
+/*
+p, div, .kuang, .kuangjibie, .jianjie-top, span, .team-top h2, .description1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden; }
+
+.description1 {
+    -webkit-line-clamp: 9; }*/
+
+/*# sourceMappingURL=addCategory.css.map */

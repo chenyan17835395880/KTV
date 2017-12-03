@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>推荐歌单</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/recommend.css">
+    <link rel="stylesheet" href="/KTV/Public/iconfont/iconfont1/iconfont.css">
+    <script src="/KTV/Public/js/iscroll.js"></script>
+    <script src="/KTV/Public/js/recommend.js"></script>
+</head>
+<body onload="loaded()">
+    <header>
+        <img src="/KTV/Public/img/zhuangtai1.png" alt="">
+    </header>
+    <nav class="nav">
+        <a href="/KTV/index.php/music/index">
+            <!--<a href="javascript:history.back();">-->
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p>推荐歌单</p>
+        <a class="change"></a>
+    </nav>
+    <ul class="list">
+        <li><img src="/KTV/Public/img/yylb1.png" alt=""><a href="/KTV/index.php/music/select?type=<?php echo $data2['stype']?>">歌手</a></li>
+
+        <li><a href="/KTV/index.php/music/rank">排行榜</a></li>
+        <li><a href="">常唱</a></li>
+        <li><a href="/KTV/index.php/music/recommend">推荐歌单</a></li>
+    </ul>
+    <div class="wrapper">
+        <div class="scroller">
+            <ul class="main">
+
+
+
+
+                <a href="/KTV/index.php/music/recommend_xq?singertype=<?php echo $data1['singertype']?>">
+                    <li>
+                        <img src="/KTV/Public/img/banner1.png" alt="">
+                        <div class="name">伤感</div>
+                        <div class="counts">
+                            <div class="left">
+                                <i class="iconfont icon-yonghu"></i>
+                                <p><?php echo $data1['clickCounts']?></p>
+                            </div>
+                            <div class="right">
+                                <i class="iconfont icon-tupian"></i>
+                                <p><?php echo $data2['Dcounts']?>首</p>
+                            </div>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

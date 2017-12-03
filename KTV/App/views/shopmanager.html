@@ -1,0 +1,127 @@
+<?php include "mainheader.html";?>
+
+<script src="/KTV/Public/js/shopmanager.js"></script>
+<link rel="stylesheet" href="/KTV/Public/css/gamemanager.css">
+<style>
+    .table>thead>.tr>th{
+        text-align: center;
+    }
+    td input{
+        width: 128px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        border: none;
+        text-align: center;
+    }
+    td input:focus{
+        outline: none;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+
+
+<div class="container">
+
+    <!--上面-->
+    <ul class="nav nav-tabs" role="tablist" id="Mytab">
+        <!--插入表-->
+        <li role="presentation" class="active">
+            <a href="#add" aria-controls="home" role="tab" data-toggle="tab" id="add">添加</a>
+        </li>
+        <!--查看表-->
+        <li role="presentation">
+            <a href="#list" aria-controls="profie" role="tab" data-toggle="tab" id="list">查看</a>
+        </li>
+    </ul>
+
+
+    <!--下面-->
+    <!--插入表-->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane tab_pane active" id="add-tab">
+            <div class="box">
+                <form action="" method="" enctype="multipart/form-data">
+                    <div class="formGroup">
+                        <label for="">商品名称：</label>
+                        <input type="text" name="sname" placeholder="请输入商品名称">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">商品类型：
+                            <input type="radio" name="type" value="1">酒水
+                            <input type="radio" name="type" value="2">零食<!--value相当于type=2-->
+                        </label>
+                        <!--<input type="text" name="type" placeholder="请输入商品类型">-->
+                    </div>
+                    <div class="formGroup">
+                        <label for="">商品热度：</label>
+                        <input type="text" name="hot" placeholder="请输入商品类型">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">商品单价：</label>
+                        <input type="text" name="price" placeholder="请输入商品类型">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">商品描述：</label>
+                        <input type="text" name="description" placeholder="请输入商品描述">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">商品容量：</label>
+                        <input type="text" name="srl" placeholder="请输入商品容量">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">商品图片：</label>
+                        <input type="file" placeholder="请选择图片" id="image" multiple>
+                    </div>
+                    <div class="imgs" style="width:200px;margin-left: 20px;"></div>
+                    <!--<img src="" alt="" id="thumb" style="width:200px;margin-left: 20px">-->
+                    <div class="formGroup">
+                        <input type="hidden" name="images"><!--hidden是把文件路径传到后台-->
+                    </div>
+                    <div class="progress" style="width: 1105px; margin:0 auto">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only">0% Complete</span>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <input class="submit" value="提交">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!--查看表-->
+        <div role="tabpanel" class="tab-pane tab_pane" id="list-tab">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading" style="padding-left: 17px">查看商品</div>
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                    <tr class="tr">
+                        <th style="">商品id</th>
+                        <th>商品类型</th>
+                        <th>商品名称</th>
+                        <th>商品热度</th>
+                        <th>商品单价</th>
+                        <th>商品描述</th>
+                        <th>商品容量</th>
+                        <th>商品图片</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

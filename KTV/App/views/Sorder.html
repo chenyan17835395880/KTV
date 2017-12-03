@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>歌曲</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/songs.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/iscroll.js"></script>
+    <script src="/KTV/Public/js/Sorder.js"></script>
+    <style>
+        body{
+            background: url("/KTV/Public/img/yylbg.png") no-repeat center / cover;
+        }
+        .left{
+            margin-right: 0.3rem;
+            position: relative;
+        }
+        .main li{
+            height: 1.55rem;
+        }
+        .left .left-one{
+            width: 1.1rem;
+            height: 1.1rem;
+            background: #FE3191;
+            margin-left: 0.1rem;
+        }
+        .left-two{
+            width: 1.1rem;
+            height: 1.1rem;
+            overflow: hidden;
+            position: absolute;
+            top:0.03rem;left:0.1rem;
+        }
+        .left-two img{
+            width: 1.2rem;
+            height: auto;
+        }
+        .geming{
+            width: 4rem;
+        }
+        .tianjia{
+            margin-left: 0.25rem;
+        }
+    </style>
+</head>
+<body onload="loaded()">
+    <header>
+        <img src="/KTV/Public/img/zhuangtai1.png" alt="">
+    </header>
+    <nav class="nav">
+        <!--<a href="/KTV/index.php/music/songs?sid=<?php echo $data2['singertype']?>&type=<?php echo $data3['stype']?>">-->
+        <a href="javascript:history.back();">
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p>已点歌曲</p>
+        <a class="change" style="width: 1.1rem;">共0首</a>
+    </nav>
+    <div class="wrapper" style="top:2.5rem;">
+        <div class="scroller">
+            <ul class="main">
+
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

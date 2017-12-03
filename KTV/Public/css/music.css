@@ -1,0 +1,230 @@
+@import "base.css";
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url("../img/sjbj.png") center / cover;
+    position: relative;
+    left:0;
+    top:0;
+    overflow: hidden;
+}
+header{
+    height: 0.4rem;
+}
+header,header img{
+    display: block;
+    width: 100%;
+    height: 0.4rem;
+}
+.nav{
+    height: 0.88rem;
+    padding: 0.3rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a,.nav a img{
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    font-size: 0.2rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.nav .change{
+    width: 1.3rem;
+}
+.nav a:nth-of-type(2).active{
+    width: 0.9rem;
+    color: #fff;
+}
+.nav p{
+    font-size: 0.35rem;
+    color: #fff;
+}
+/*列表*/
+.list{
+    width: 6.67rem;
+    height: 0.38rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list img{
+    display: block;
+    width: 0.3rem;
+    height:0.3rem;
+    margin-right: 0.1rem;
+}
+.list>li:nth-of-type(1){
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.list>li>a{
+    display: block;
+    font-size: 0.22rem;
+    color: #fff;
+    line-height: 0.36rem;
+}
+/*搜索*/
+input{
+    width: 7.02rem;
+    height:0.68rem;
+    display: block;
+    margin:0 auto;
+    line-height: 0.68rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 0.1rem;
+    margin-top: 0.25rem;
+}
+input:focus{
+    outline: none;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    font-size: 0.2rem;
+    color: #C7C8D3;
+}
+.icon{
+    width: 0.56rem; /*设置图片显示的宽*/
+    height: 0.48rem; /*图片显示的高*/
+    position: absolute;
+    left:1.7rem;
+    z-index:5;
+    margin-top: 0.1rem;
+    background: url(../img/yylb7.png) no-repeat center / cover; /*引入图片图片*/
+}
+/*下面*/
+.main{
+    width: 6.96rem;
+    height: 9.44rem;
+    background: #fff;
+    margin:0 auto;
+    margin-top: 0.4rem;
+    padding: 0.03rem;
+    /*display: flex;
+    justify-content: center;*/
+    overflow: hidden;
+}
+.main-top{
+    width: 6.98rem;
+    height: 3.95rem;
+    display: block;
+    margn: 0 auto;
+    position: relative;
+}
+.title1{
+    position: absolute;
+    left:0;right:0;
+    margin-left: auto;
+    margin-right: auto;
+    color:#fff;
+    line-height: 3.8rem;
+    font-size: 0.3rem;
+    text-align: center;
+}
+.main-top img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.main-center{
+    width: 6.98rem;
+    height: 2.13rem;
+    margin:0 auto;
+    margin-top: 0.02rem;
+    display: flex;
+    justify-content: space-between;
+}
+.main-center a:nth-of-type(1) li{
+    width:2.8rem;
+    height: 2.13rem;
+    display: block;
+    position: relative;
+}
+.main-center a:nth-of-type(2)  li{
+    width:2.05rem;
+    height: 2.13rem;
+    display: block;
+    position: relative;
+}
+.main-center a:nth-of-type(3)  li{
+    width:2.04rem;
+    height: 2.13rem;
+    display: block;
+    position: relative;
+}
+.title2{
+    line-height: 2.13rem;
+}
+.main-center li img{
+    display: block;
+    width:100%;
+    height: 100%;
+}
+.main-bottom{
+    width: 6.98rem;
+    height: 3.29rem;
+    margin:0 auto;
+    margin-top: 0.02rem;
+    display: flex;
+    justify-content: space-between;
+}
+.main-bottom a:nth-of-type(1) li{
+    width:2.8rem;
+    height: 3.29rem;
+    display: block;
+    position: relative;
+}
+.main-bottom li  img{
+    display: block;
+    width:100%;
+    height: 3.29rem;
+}
+.main-bottom a:nth-of-type(2) li{
+    width:4.15rem;
+    height: 3.29rem;
+    display: block;
+    position: relative;
+}
+.main-bottom a:nth-of-type(1) .title1.title3{
+    top:0;bottom:0;
+    margin-top: auto;margin-bottom: auto;
+    width:1.67rem;
+    height: 1.2rem;
+    background: rgba(0,0,0,0.25);
+    line-height:1.2rem;
+}
+.main-bottom a:nth-of-type(2) .title1.title3{
+    top:0;bottom:0;
+    margin-top: auto;margin-bottom: auto;
+    width:1.76rem;
+    height: 1.2rem;
+    background: rgba(0,0,0,0.25);
+    line-height:0.6rem;
+}
+.main-bottom li:nth-of-type(2) span{
+    position: absolute;
+    top:0;
+    bottom:0;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 1.2rem;
+}
+.main-bottom li:nth-of-type(2) span:nth-of-type(1){
+     left:-0.02rem;
+ }
+.main-bottom li:nth-of-type(2) span:nth-of-type(2){
+    right:-0.02rem;
+}
+span{
+    font-size: 0.5rem;
+}

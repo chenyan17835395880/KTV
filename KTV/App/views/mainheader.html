@@ -1,0 +1,111 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/KTV/Public/css/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <style>
+        .tips{
+            position: fixed;
+            top:0;
+            left:0;
+            background: #272924;
+            width: 0;
+            height: 3px;
+            z-index: 999;
+        }
+        #nav{
+            position: fixed;
+            left:0;
+            right:0;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 9999;
+        }
+        .navbar-header .navbar-brand{
+            color: #5d5959;
+        }
+        .nav.navbar-nav #actives{
+            background: #E7E7E7;
+        }
+        .ding{
+            width: 100%;
+            height: 90px;
+        }
+    </style>
+    <script>
+        $(function(){
+            let tips=$('.tips');
+            $(window).ajaxStart(function(){
+                tips.animate({width:'80%'});
+            });
+            $(window).ajaxComplete(function(){
+                tips.stop().animate({width:'100%'}).queue(function(){
+                    $(this).css({width:0});////////////
+                })
+            });
+            $('.dropdown').on('mouseenter',function(){
+                $('.dropdown-menu',this).stop();
+                $('.dropdown-menu',this).slideDown();
+            })
+            $('.dropdown').on('mouseleave',function(){
+                $('.dropdown-menu',this).stop();
+                $('.dropdown-menu',this).slideUp();
+            })
+            /*$('.dropdown').on('click',function(){
+                $('.dropdown-menu',this).slideToggle();
+            })*/
+            let lis=$('.navbar-nav>li');
+            lis.on('click',function(){
+                lis.removeClass('active');
+
+            })
+            $(lis[0]).triggerHandler('click');
+        })
+    </script>
+</head>
+<body>
+
+<nav class="navbar navbar-default" id="nav">
+    <div class="tips"></div>
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">KTV后台管理系统</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li id="<?php echo $title=='游戏管理'?'actives':'';?>">
+                    <a href="/KTV/index.php/gamemanager/index">游戏管理 </a>
+                </li>
+                <li id="<?php echo $title=='商店管理'?'actives':'';?>">
+                    <a href="/KTV/index.php/shopmanager/index">商店管理</a>
+                </li>
+                <li class="dropdown" id="<?php echo $title=='音乐管理'?'actives':'';?>">
+                    <a href="#" >音乐管理 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/KTV/index.php/musicmanager/index">分类管理</a></li>
+                        <li><a href="/KTV/index.php/singermanager/index">歌手管理</a></li>
+                        <li><a href="/KTV/index.php/songsmanager/index">歌曲管理</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">返回首页</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="ding"></div>
+</body>
+</html>

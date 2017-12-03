@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="/KTV/Public/css/login.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/login.js"></script>
+    <style>
+        .form-help{
+            color:red;
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="">
+    <h2>后台登录系统</h2>
+    <div>
+        <input type="text" name="user" value="" placeholder="请输入用户名" id="user"
+               data-validata="require:必填项;username:请输入5-8位字母">
+        <!--<div class="form-help">用户名不允许为空</div>-->
+    </div>
+    <div>
+        <input type="password" name="pass" value="" placeholder="请输入密码" id="pass"
+               data-validata="require:必填项;password:请输入5-8位数字、字母、下划线">
+    </div>
+    <input class="onclick" value="提交" type=""><!-- input type='submit'可以直接提交 -->
+</form>
+</body>
+</html>

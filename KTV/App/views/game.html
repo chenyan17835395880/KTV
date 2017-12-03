@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>游戏</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/game.css">
+</head>
+<body>
+    <header>
+        <img src="/KTV/Public/img/zhuangtai.png" alt="">
+    </header>
+    <nav class="nav">
+        <a href="/KTV/index.php/home">
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p>游戏</p>
+        <a href=""></a>
+    </nav>
+    <section class="main">
+        <ul>
+
+            <?php for($i=0;$i<count($data);$i++){?>
+
+                <li><a href="/KTV/index.php/game/select?type=<?php echo $data[$i]['id']?>"><?php echo $data[$i]['name'];?></a></li>
+
+            <?php };?>
+
+
+            <!--<li><a href="/KTV/index.php/game/select?type=1">真心话</a></li>
+            <li><a href="/KTV/index.php/game/select?type=2">大冒险</a></li>
+            <li><a href="/KTV/index.php/game/select?type=3">找你妹</a></li>
+            <li><a href="/KTV/index.php/game/select?type=4">球球大作战</a></li>
+            <li><a href="/KTV/index.php/game/select?type=5">王者荣耀</a></li>
+            <li><a href="/KTV/index.php/game/select?type=6">消消乐</a></li>-->
+        </ul>
+    </section>
+</body>
+</html>

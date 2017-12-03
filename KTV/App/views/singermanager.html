@@ -1,0 +1,118 @@
+<?php include "mainheader.html";?>
+
+<script src="/KTV/Public/js/singermanager.js"></script>
+<link rel="stylesheet" href="/KTV/Public/css/gamemanager.css">
+<style>
+    .table>thead>.tr>th{
+        text-align: center;
+        /*width: 90px;*/
+    }
+    td input{
+        border: none;
+        text-align: center;
+    }
+    td input:focus{
+        outline: none;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+
+
+<div class="container">
+
+    <!--上面-->
+    <ul class="nav nav-tabs" role="tablist" id="Mytab">
+        <!--插入表-->
+        <li role="presentation" class="active">
+            <a href="#add" aria-controls="home" role="tab" data-toggle="tab" id="add">添加</a>
+        </li>
+        <!--查看表-->
+        <li role="presentation">
+            <a href="#list" aria-controls="profie" role="tab" data-toggle="tab" id="list">查看</a>
+        </li>
+    </ul>
+
+
+    <!--下面-->
+    <!--插入表-->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane tab_pane active" id="add-tab">
+            <div class="box">
+                <form action="" method="" enctype="">
+                    <div class="formGroup">
+                        <label for="">歌手类型：
+                            <input type="radio" name="stype" value="1">内地偶像组合
+                            <input type="radio" name="stype" value="2">内地男歌手<!--value相当于type=2-->
+                            <input type="radio" name="stype" value="3">港台歌手
+                            <input type="radio" name="stype" value="4">日韩女歌手
+                            <input type="radio" name="stype" value="5">内地女歌手
+                            <input type="radio" name="stype" value="6">内地偶像男歌手
+                        </label>
+                        <!--<input type="text" name="type" placeholder="请输入商品类型">-->
+                    </div>
+                    <div class="formGroup">
+                        <label for="">歌手名字：</label>
+                        <input type="text" name="sname" placeholder="请输入歌手名字">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">名字拼音：</label>
+                        <input type="text" name="pinyin" placeholder="请输入歌手名字的拼音">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">点击量：</label>
+                        <input type="text" name="Dcounts" placeholder="请输入点击量">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">歌手图片：</label>
+                        <input type="file" placeholder="请选择图片" id="images" multiple>
+                    </div>
+                    <div class="imgs" style="width:200px;margin-left: 20px;"></div>
+                    <!--<img src="" alt="" id="thumb" style="width:200px;margin-left: 20px">-->
+                    <div class="formGroup">
+                        <input type="hidden" name="images" ><!--hidden是把文件路径传到后台-->
+                    </div>
+                    <div class="progress" style="width: 1105px; margin:0 auto">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                            <span class="sr-only">0% Complete</span>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <input class="submit" value="提交">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!--查看表-->
+        <div role="tabpanel" class="tab-pane tab_pane" id="list-tab">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading" style="padding-left: 17px">歌曲管理 --> 歌手管理</div>
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                    <tr class="tr">
+                        <th>歌手id</th>
+                        <th>歌手类型</th>
+                        <th>歌手名字</th>
+                        <th>名字拼音</th>
+                        <th>歌手图片</th>
+                        <th>点击量</th>
+                        <!--<th>fid</th>-->
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

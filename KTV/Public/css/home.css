@@ -1,0 +1,51 @@
+@import "base.css";
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background: url("../img/bj.png") center / cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+header,header img{
+    display: block;
+    width: 100%;
+    height: 0.4rem;
+    position: relative;
+    z-index: 999;
+}
+.main{
+    width: 100%;
+    height: 5.34rem;
+    padding:0.24rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 0.1rem;
+}
+.main li{
+    border-radius: 0.06rem;
+    -webkit-border-radius: 0.06rem;
+    width: 3.4rem;
+    height: 2.3rem;
+}
+.main li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.main li:first-of-type{
+    background:#fff url("../img/bg-1.png") center / cover;
+}
+.main li:nth-of-type(2){
+    background:#fff url("../img/bg-2.png") center / cover;
+}
+.main li:nth-of-type(3){
+    background:#fff url("../img/bg-3.png") center / cover;
+}
+.main li:nth-of-type(4){
+    background:#fff url("../img/bg-4.png") center / cover;
+}

@@ -1,0 +1,105 @@
+<?php include "mainheader.html";?>
+
+<script src="/KTV/Public/js/songsmanager.js"></script>
+<link rel="stylesheet" href="/KTV/Public/css/gamemanager.css">
+<style>
+    .table>thead>.tr>th{
+        text-align: center;
+        width:40px;
+    }
+    td input{
+        /*width: 80px;*/
+        border: none;
+        text-align: center;
+    }
+    td input:focus{
+        outline: none;
+    }
+    td{
+        text-align: center;
+    }
+</style>
+
+
+<div class="container">
+
+    <!--上面-->
+    <ul class="nav nav-tabs" role="tablist" id="Mytab">
+        <!--插入表-->
+        <li role="presentation" class="active">
+            <a href="#add" aria-controls="home" role="tab" data-toggle="tab" id="add">添加</a>
+        </li>
+        <!--查看表-->
+        <li role="presentation">
+            <a href="#list" aria-controls="profie" role="tab" data-toggle="tab" id="list">查看</a>
+        </li>
+    </ul>
+
+
+    <!--下面-->
+    <!--插入表-->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane tab_pane active" id="add-tab">
+            <div class="box">
+                <form action="" method="" enctype="">
+                    <div class="formGroup">
+                        <label for="">歌手点击量：</label>
+                        <input type="text" name="clickCounts" placeholder="请输入分类名称">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">歌曲名称：</label>
+                        <input type="text" name="oname" placeholder="请输入分类名称">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">歌曲时间：</label>
+                        <input type="text" name="time" placeholder="请输入分类名称">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">歌手类型：</label>
+                        <input type="text" name="singertype" placeholder="请输入分类名称">
+                    </div>
+                    <div class="formGroup">
+                        <label for="">歌曲：</label>
+                        <input type="file" placeholder="请输入歌曲" id="music">
+                    </div>
+                    <div class="formGroup">
+                        <input type="hidden" name="music" placeholder="请输入歌曲" id="music1">
+                    </div>
+
+                    <div class="formGroup">
+                        <input class="submit" value="提交">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!--查看表-->
+        <div role="tabpanel" class="tab-pane tab_pane" id="list-tab">
+            <div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading" style="padding-left: 17px">音乐管理 --> 歌曲管理</div>
+                <!-- Table -->
+                <table class="table">
+                    <thead>
+                    <tr class="tr">
+                        <th>sid</th>
+                        <th>歌手点击量</th>
+                        <th>歌曲名称</th>
+                        <th>歌曲时间</th>
+                        <th>歌手类型</th>
+                        <th>歌曲</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

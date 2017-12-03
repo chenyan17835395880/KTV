@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>歌曲</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/songs.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/iscroll.js"></script>
+    <script src="/KTV/Public/js/songs.js"></script>
+</head>
+<body onload="loaded()">
+    <img src="<?php echo $data['images']?>" alt="" class="img">
+    <img src="/KTV/Public/img/zhezhao.png" alt="" class="img2">
+    <img src="/KTV/Public/img/songbj2.png" alt="" class="img1">
+    <header>
+        <img src="/KTV/Public/img/zhuangtai.png" alt="">
+    </header>
+    <nav class="nav">
+        <a href="/KTV/index.php/music/select?type=<?php echo $data['stype']?>">
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p><?php echo $data['sname']?></p>
+        <a href="/KTV/index.php/music/sorder?singertype=<?php echo $data3['singertype']?>" class="change">已点歌曲</a>
+    </nav>
+    <section class="xinxi">
+        <div class="left">
+            <div class="left-one"></div>
+            <div class="left-two">
+                <img src="<?php echo $data['images']?>" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <span><?php echo $data['sname']?>  —  <?php echo $data1['ftitle']?></span>
+            <ul>
+                <li><img src="/KTV/Public/img/songsmusic.png" alt=""></li>
+                <li>歌曲  <?php echo $data['Dcounts']?></li>
+            </ul>
+            <p>本月点击量：<?php echo $data3['clickCounts']?></p>
+        </div>
+    </section>
+    <div class="wrapper">
+        <div class="scroller">
+            <ul class="main">
+
+                <?php for($i=0;$i<count($data2);$i++){?>
+
+                    <li data='<?php echo json_encode($data2[$i])?>;<?php echo $data["sname"]?>;<?php echo $data["images"]?>;<?php echo $data3["singertype"]?>'>
+                        <div class="shu">0<?php echo $i+1?></div>
+                        <div class="geming">
+                            <p><?php echo $data2[$i]['oname']?></p>
+                            <p><?php echo $data2[$i]['time']?></p>
+                        </div>
+                        <div class="tianjia">
+
+                            <img src="/KTV/Public/img/delete.png" alt="" class="img3">
+                            <img src="/KTV/Public/img/add_07.png" alt="" class="img4">
+
+                        </div>
+                    </li>
+
+                <?php }?>
+
+
+               <!-- <li>
+                    <div class="shu">01</div>
+                    <div class="geming">
+                        <p>歌手与演员 —— <?php echo $data['sname']?></p>
+                        <p>04"25'</p>
+                    </div>
+                    <div class="tianjia">
+                        <img src="/KTV/Public/img/add_07.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="shu">02</div>
+                    <div class="geming">
+                        <p>歌手与演员 —— 谁谁谁</p>
+                        <p>04"25'</p>
+                    </div>
+                    <div class="tianjia">
+                        <img src="/KTV/Public/img/add_07.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="shu">03</div>
+                    <div class="geming">
+                        <p>歌手与演员 —— 谁谁谁</p>
+                        <p>04"25'</p>
+                    </div>
+                    <div class="tianjia">
+                        <img src="/KTV/Public/img/add_07.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="shu">04</div>
+                    <div class="geming">
+                        <p>歌手与演员 —— 谁谁谁</p>
+                        <p>04"25'</p>
+                    </div>
+                    <div class="tianjia">
+                        <img src="/KTV/Public/img/add_07.png" alt="">
+                    </div>
+                </li>-->
+            </ul>
+
+        </div>
+    </div>
+    <!--<div class="div"></div>-->
+</body>
+</html>

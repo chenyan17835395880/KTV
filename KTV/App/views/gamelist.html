@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>游戏详情</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/gamelist.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/gamelist.js"></script>
+</head>
+<body>
+    <header>
+        <img src="/KTV/Public/img/zhuangtai.png" alt="">
+    </header>
+    <nav class="nav">
+        <a href="/KTV/index.php/game/index">
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p>游戏详情</p>
+        <a class="change">换一批</a>
+    </nav>
+    <ul class="main">
+
+        <?php for($i=0;$i<count($data);$i++){?>
+
+            <li><a href=""><?php echo $data[$i]['gname'];?></a></li>
+            <!--select()传来的-->
+
+        <?php };?>
+
+    </ul>
+    <section class="shuoming"></section>
+    <section class="botton">
+        <botton class="bot-left color" id="1">真心话</botton>
+        <botton  class="bot-right" id="2">大冒险</botton>
+        <!--<div class="flag"></div>-->
+    </section>
+    <!--<footer>
+        <button id="1" class="active">真心话</button>
+        <button id="2">大冒险</button>
+        <div class="flag"></div>
+    </footer>-->
+</body>
+</html>

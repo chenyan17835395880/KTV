@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <script src="/KTV/Public/js/rem.js"></script>
+    <link rel="stylesheet" href="/KTV/Public/css/shoplist.css">
+    <script src="/KTV/Public/js/jquery-3.2.1.js"></script>
+    <script src="/KTV/Public/js/iscroll.js"></script>
+    <script src="/KTV/Public/js/shoplist.js"></script>
+</head>
+<body onload="loaded()">
+    <header>
+        <img src="/KTV/Public/img/zhuangtai1.png" alt="">
+    </header>
+    <nav class="nav">
+        <a href="javascript:history.back()">
+            <img src="/KTV/Public/img/at_04.png" alt="">
+        </a>
+        <p>·&nbsp;&nbsp;0806房间已选商品&nbsp;&nbsp;·</p>
+        <a class="change"></a>
+    </nav>
+    <div class="zongjian">共<span class="counts"></span>件</div>
+    <div class="wrapper drinklist">
+        <div class="scroller">
+            <ul class="main list">
+
+            </ul>
+        </div>
+
+    </div>
+    <div class="wrapper snackslist">
+        <div class="scroller">
+            <ul class="main list">
+                <!--&lt;!&ndash;<li>-->
+                <!--<div class="left">-->
+                <!--<img src="/KTV/Public/img/sd2.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="right">-->
+                <!--<div class="right-top">-->
+                <!--<div class="sname">HELMSAN啤酒</div>-->
+                <!--<div class="introduce">可以让你飞的鸡尾酒&nbsp;&nbsp;<span>300ml</span></div>-->
+                <!--</div>-->
+                <!--<div class="zongjia">-->
+                <!--<div class="count">-->
+                <!--<div class="jian">-</div>-->
+                <!--<div class="shu">10</div>-->
+                <!--<div class="jia">+</div>-->
+                <!--</div>-->
+                <!--<div class="price">90<span>RMB</span></div>-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<div class="left">-->
+                <!--<img src="/KTV/Public/img/sd3.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="right">-->
+                <!--<div class="right-top">-->
+                <!--<div class="sname">HELMSAN啤酒</div>-->
+                <!--<div class="introduce">可以让你飞的鸡尾酒&nbsp;&nbsp;<span>300ml</span></div>-->
+                <!--</div>-->
+                <!--<div class="zongjia">-->
+                <!--<div class="count">-->
+                <!--<div class="jian">-</div>-->
+                <!--<div class="shu">04</div>-->
+                <!--<div class="jia">+</div>-->
+                <!--</div>-->
+                <!--<div class="price">50<span>RMB</span></div>-->
+                <!--</div>-->
+
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li>
+                    <div class="left">
+                        <img src="/KTV/Public/img/sd4.png" alt="">
+                    </div>
+                    <div class="right">
+                        <div class="right-top">
+                            <div class="sname">HELMSAN啤酒</div>
+                            <div class="introduce">可以让你飞的鸡尾酒&nbsp;&nbsp;<span>100ml</span></div>
+                        </div>
+                        <div class="zongjia">
+                            <div class="count">
+                                <div class="jian">-</div>
+                                <div class="shu">03</div>
+                                <div class="jia">+</div>
+                            </div>
+                            <div class="price">6<span>RMB</span></div>
+                        </div>
+                    </div>
+                </li>-->
+                <!--&lt;!&ndash;<li>-->
+                <!--<div class="left">-->
+                <!--<img src="/KTV/Public/img/sd8.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="right">-->
+                <!--<div class="right-top">-->
+                <!--<div class="sname">薯片</div>-->
+                <!--<div class="introduce">可以让你飞的鸡尾酒&nbsp;&nbsp;<span>100g</span></div>-->
+                <!--</div>-->
+                <!--<div class="zongjia">-->
+                <!--<div class="count">-->
+                <!--<div class="jian">-</div>-->
+                <!--<div class="shu">05</div>-->
+                <!--<div class="jia">+</div>-->
+                <!--</div>-->
+                <!--<div class="price">45<span>RMB</span></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<div class="left">-->
+                <!--<img src="/KTV/Public/img/sd9.png" alt="">-->
+                <!--</div>-->
+                <!--<div class="right">-->
+                <!--<div class="right-top">-->
+                <!--<div class="sname">牛奶饼干</div>-->
+                <!--<div class="introduce">可以让你飞的鸡尾酒&nbsp;&nbsp;<span>100g</span></div>-->
+                <!--</div>-->
+                <!--<div class="zongjia">-->
+                <!--<div class="count">-->
+                <!--<div class="jian">-</div>-->
+                <!--<div class="shu">04</div>-->
+                <!--<div class="jia">+</div>-->
+                <!--</div>-->
+                <!--<div class="price">40<span>RMB</span></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</li>&ndash;&gt;&ndash;&gt;-->
+            </ul>
+        </div>
+
+    </div>
+
+    <section class="Allprice">
+        <div class="Allprice-box">
+            <div class="left">TOTAL</div>
+            <span></span>
+            <div class="right">
+                <div class="one"></div>
+                <div class="right-left">
+                    <div class="cprice">总价</div>
+                    <div class="eprice">RMB</div>
+                </div>
+                <div class="right-right">0.00</div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom">确认提交</section>
+</body>
+</html>
